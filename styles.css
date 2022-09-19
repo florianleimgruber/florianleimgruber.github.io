@@ -1,0 +1,15 @@
+body {
+  font-family: Helvetica;
+  padding: 0;
+  margin: 20px 0 0 20px;
+}
+
+div {
+  margin-bottom: 5px;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  margin-right: 10px;
+}

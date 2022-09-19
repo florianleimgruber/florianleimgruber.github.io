@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi-step import</title>
+    <link rel=stylesheet href=styles.css>
+    <script src=form-utils.js></script>
+    <script>
+function init_import_update() {
+  switch (page) {
+    case 1:
+      create_multiform("Basic information", `
+        ${field("Name", "name")}
+        ${field("Country", "country-name")}`);
+      break;
+    case 2:
+      create_multiform("Address details", `
+        ${field("Address", "address-line1")}
+        ${field("City", "address-level2")}
+        ${field("Zip", "postal-code")}`);
+      break;
+    case 3:
+      create_multiform("Contact details", `
+        ${field("Email", "email")}
+        ${field("Phone", "tel")}`);
+      break;
+    case 4:
+      create_multiform("", "", true);
+      break;
+  }
+}
+    </script>
+  </head>
+  <body onload=init_import_update()>
+  </body>
+</html>
